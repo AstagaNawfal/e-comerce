@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZAHRA FASHION OUTLET</title>
+    <meta name="description" content="ZAHRA FASHION OUTLET - Style sederhana, tampil lebih percaya diri.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">ZAHRA <span>FASHION</span> OUTLET</a>
+
+            <button type="button" class="hamburger" id="hamburger" aria-label="Buka menu" aria-expanded="false">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#produk" class="nav-link">Produk</a></li>
+                <li><a href="#kategori" class="nav-link">Kategori</a></li>
+                <li><a href="#tentang" class="nav-link">Tentang Kami</a></li>
+                <li><a href="#kontak" class="nav-link">Kontak</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Cari produk..." aria-label="Cari produk">
+                    <i class="fas fa-search" aria-hidden="true"></i>
+                </div>
+                <button type="button" class="cart-btn" id="cartBtn" aria-label="Buka keranjang">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-badge" id="cartBadge">0</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <p class="hero-kicker">Selamat datang di</p>
+            <h1>ZAHRA FASHION OUTLET</h1>
+            <p class="hero-tagline">"Style sederhana, tampil lebih percaya diri."</p>
+            <div class="hero-actions">
+                <a href="#produk" class="btn btn-primary">Belanja Sekarang</a>
+                <a href="#kategori" class="btn btn-ghost">Lihat Koleksi</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Kategori -->
+    <section id="kategori" class="section section-kategori">
+        <div class="container">
+            <div class="section-head">
+                <p class="section-kicker">Temukan gayamu</p>
+                <h2 class="section-title">Kategori</h2>
+            </div>
+            <div class="kategori-filter" id="kategoriFilter" role="tablist">
+                <button type="button" class="filter-btn is-active" data-category="Semua">Semua</button>
+                <button type="button" class="filter-btn" data-category="T-Shirt">T-Shirt</button>
+                <button type="button" class="filter-btn" data-category="Kemeja">Kemeja</button>
+                <button type="button" class="filter-btn" data-category="Hoodie">Hoodie</button>
+                <button type="button" class="filter-btn" data-category="Sweater">Sweater</button>
+                <button type="button" class="filter-btn" data-category="Dress">Dress</button>
+                <button type="button" class="filter-btn" data-category="Celana">Celana</button>
+                <button type="button" class="filter-btn" data-category="Jaket">Jaket</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Produk -->
+    <section id="produk" class="section section-produk">
+        <div class="container">
+            <div class="section-head">
+                <p class="section-kicker">Koleksi pilihan</p>
+                <h2 class="section-title">Produk</h2>
+            </div>
+
+            <div class="produk-toolbar">
+                <p class="produk-count" id="produkCount"></p>
+                <div class="sort-box">
+                    <label for="sortSelect">Urutkan</label>
+                    <select id="sortSelect">
+                        <option value="terbaru">Terbaru</option>
+                        <option value="harga-rendah">Harga terendah</option>
+                        <option value="harga-tinggi">Harga tertinggi</option>
+                        <option value="rating-tinggi">Rating tertinggi</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="produk-grid" id="produkGrid"></div>
+            <p class="produk-empty" id="produkEmpty" hidden>Produk tidak ditemukan.</p>
+        </div>
+    </section>
+
+    <!-- Best Seller -->
+    <section class="section section-bestseller">
+        <div class="container">
+            <div class="section-head">
+                <p class="section-kicker">Favorit pelanggan</p>
+                <h2 class="section-title">Best Seller</h2>
+            </div>
+            <div class="produk-grid" id="bestSellerGrid"></div>
+        </div>
+    </section>
+
+    <!-- Promo -->
+    <section class="section section-promo">
+        <div class="container">
+            <div class="promo-card">
+                <div class="promo-text">
+                    <p class="section-kicker">Promo</p>
+                    <h2>Diskon 20% untuk pembelian pertama</h2>
+                    <p class="promo-note">Gunakan kode voucher <strong>ZAHRA20</strong> saat checkout via WhatsApp.</p>
+                </div>
+                <a href="#produk" class="btn btn-dark">Belanja Sekarang</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tentang Kami -->
+    <section id="tentang" class="section section-tentang">
+        <div class="container container-narrow">
+            <div class="section-head">
+                <p class="section-kicker">Cerita kami</p>
+                <h2 class="section-title">Tentang Kami</h2>
+            </div>
+            <p class="tentang-text">
+                ZAHRA FASHION OUTLET hadir untuk kamu yang ingin tampil sederhana namun percaya diri.
+                Kami menyediakan pakaian berkualitas dengan desain minimalis, nyaman dipakai sehari-hari,
+                dan tetap terlihat elegan. Setiap koleksi kami pilih dengan detail agar cocok untuk
+                berbagai usia dan gaya.
+            </p>
+            <div class="tentang-stats">
+                <div class="stat"><strong>500+</strong><span>Produk terjual</span></div>
+                <div class="stat"><strong>4.9</strong><span>Rating pelanggan</span></div>
+                <div class="stat"><strong>100%</strong><span>Produk asli</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial -->
+    <section class="section section-testimonial">
+        <div class="container">
+            <div class="section-head">
+                <p class="section-kicker">Kata mereka</p>
+                <h2 class="section-title">Testimonial</h2>
+            </div>
+            <div class="testimonial-grid">
+                <figure class="testimonial-card">
+                    <div class="stars" aria-label="Rating 5 dari 5">★★★★★</div>
+                    <blockquote>Bahannya adem dan jahitannya rapi. Packing juga aman, pasti beli lagi.</blockquote>
+                    <figcaption><strong>Sinta A.</strong> — Bandung</figcaption>
+                </figure>
+                <figure class="testimonial-card">
+                    <div class="stars" aria-label="Rating 5 dari 5">★★★★★</div>
+                    <blockquote>Warna sama persis dengan foto. Hoodie-nya pas dipakai santai maupun keluar rumah.</blockquote>
+                    <figcaption><strong>Rangga P.</strong> — Surabaya</figcaption>
+                </figure>
+                <figure class="testimonial-card">
+                    <div class="stars" aria-label="Rating 5 dari 5">★★★★★</div>
+                    <blockquote>Proses pesan gampang lewat WhatsApp, barang sampai cepat. Recommended!</blockquote>
+                    <figcaption><strong>Dewi K.</strong> — Jakarta</figcaption>
+                </figure>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kontak -->
+    <section id="kontak" class="section section-kontak">
+        <div class="container container-narrow">
+            <div class="section-head">
+                <p class="section-kicker">Hubungi kami</p>
+                <h2 class="section-title">Kontak</h2>
+            </div>
+            <div class="kontak-list">
+                <a class="kontak-item" id="kontakWaLink" href="https://wa.me/6281234567890" target="_blank" rel="noopener">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>WhatsApp<strong id="kontakWa">+62 812-3456-7890</strong></span>
+                </a>
+                <a class="kontak-item" href="mailto:zahrafashion@example.com">
+                    <i class="fas fa-envelope"></i>
+                    <span>Email<strong>zahrafashion@example.com</strong></span>
+                </a>
+                <div class="kontak-item">
+                    <i class="fas fa-clock"></i>
+                    <span>Jam operasional<strong>Senin–Sabtu, 09.00–20.00 WIB</strong></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <p class="footer-brand">ZAHRA FASHION OUTLET</p>
+            <p class="footer-copy">© <span id="year"></span> Zahra Fashion Outlet. Semua hak dilindungi.</p>
+        </div>
+    </footer>
+
+    <!-- Cart Sidebar -->
+    <div class="overlay" id="cartOverlay" hidden></div>
+    <aside class="cart-sidebar" id="cartSidebar" aria-hidden="true" aria-label="Keranjang belanja">
+        <div class="cart-header">
+            <h2>Keranjang</h2>
+            <button type="button" class="icon-btn" id="cartClose" aria-label="Tutup keranjang">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="cart-items" id="cartItems"></div>
+        <div class="cart-footer">
+            <div class="cart-row">
+                <span>Subtotal</span>
+                <strong id="cartSubtotal">Rp 0</strong>
+            </div>
+            <div class="cart-row cart-row-total">
+                <span>Total</span>
+                <strong id="cartTotal">Rp 0</strong>
+            </div>
+            <button type="button" class="btn btn-primary btn-block" id="checkoutBtn">Checkout</button>
+        </div>
+    </aside>
+
+    <!-- Product Detail Modal -->
+    <div class="modal" id="productModal" aria-hidden="true">
+        <div class="modal-backdrop" data-close-product></div>
+        <div class="modal-box modal-product" role="dialog" aria-modal="true" aria-labelledby="productModalTitle">
+            <div class="modal-head">
+                <h2 id="productModalTitle">Detail Produk</h2>
+                <button type="button" class="icon-btn" data-close-product aria-label="Tutup detail produk">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="product-modal-body" id="productModalBody"></div>
+        </div>
+    </div>
+
+    <!-- Checkout Modal -->
+    <div class="modal" id="checkoutModal" aria-hidden="true">
+        <div class="modal-backdrop" data-close-modal></div>
+        <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="checkoutTitle">
+            <div class="modal-head">
+                <h2 id="checkoutTitle">Checkout</h2>
+                <button type="button" class="icon-btn" data-close-modal aria-label="Tutup checkout">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <form class="checkout-form" id="checkoutForm" novalidate>
+                <div class="form-grid">
+                    <label class="field field-full">
+                        <span>Nama</span>
+                        <input type="text" name="nama" id="coNama" placeholder="Nama lengkap" required>
+                    </label>
+                    <label class="field">
+                        <span>Nomor WhatsApp</span>
+                        <input type="tel" name="whatsapp" id="coWa" placeholder="08xxxxxxxxxx" required>
+                    </label>
+                    <label class="field">
+                        <span>Kota</span>
+                        <input type="text" name="kota" id="coKota" placeholder="Kota" required>
+                    </label>
+                    <label class="field field-full">
+                        <span>Alamat</span>
+                        <textarea name="alamat" id="coAlamat" rows="3" placeholder="Jalan, nomor rumah, kecamatan" required></textarea>
+                    </label>
+                    <label class="field">
+                        <span>Kode Pos</span>
+                        <input type="text" name="kodepos" id="coPos" placeholder="12345" required>
+                    </label>
+                    <label class="field">
+                        <span>Metode Pembayaran</span>
+                        <select name="pembayaran" id="coBayar" required>
+                            <option value="">Pilih pembayaran</option>
+                            <option>Transfer Bank</option>
+                            <option>QRIS</option>
+                            <option>E-Wallet (GoPay/OVO/Dana)</option>
+                            <option>COD (Bayar di tempat)</option>
+                        </select>
+                    </label>
+                </div>
+
+                <div class="checkout-summary">
+                    <h3>Ringkasan Pesanan</h3>
+                    <div id="checkoutSummary"></div>
+                    <div class="cart-row cart-row-total">
+                        <span>Total Pembayaran</span>
+                        <strong id="checkoutTotal">Rp 0</strong>
+                    </div>
+                </div>
+
+                <p class="form-error" id="formError" hidden>Mohon lengkapi semua data dengan benar.</p>
+
+                <button type="submit" class="btn btn-primary btn-block">
+                    <i class="fab fa-whatsapp"></i> Kirim Pesanan ke WhatsApp
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
